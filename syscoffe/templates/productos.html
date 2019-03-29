@@ -1,0 +1,8 @@
+{% extends 'base.html' %}
+{% block contenedor %}
+    <ul>
+        {% for p in productos %}
+        <li>{{ p.nombre | upper }}</li>
+        {% endfor %}
+    </ul>
+{% endblock %}
