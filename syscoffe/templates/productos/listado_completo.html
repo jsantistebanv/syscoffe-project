@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block contenedor %}
+    <h2>Categorias</h2>
+    <ul>
+        {% for c in categorias %}
+        <li>{{ c.nombre | upper }}</li>
+        {% endfor %}
+    </ul>
+    <h2>Productos</h2>
+    <ul>
+        {% for p in productos %}
+        <li>{{ p.nombre | upper }}</li>
+        {% endfor %}
+    </ul>
+{% endblock %}

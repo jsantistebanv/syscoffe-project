@@ -1,0 +1,23 @@
+<h3><a href="{% url "productos:listview" %}">Listado de productos</a></h3>
+<h3><a href="{{ request.path }}">Listado de productos</a></h3>
+
+{% for p in object_list %}
+    <p>{{ p.nombre }}</p>
+{% endfor %}
+<div class="pagination">
+    <span class="page-links">
+        {% if page_obj.has_previous %}
+            <a href="{% url "productos:listview" %}?page={{ page_obj.previous_page_number }}">anterior</a>
+        {% endif %}
+        <span class="page-current">
+            Pagina {{ page_obj.number }} de {{ page_obj.paginator.num_pages }}.
+        </span>
+        {% if page_obj.has_next %}
+            <a href="{% url "productos:listview" %}?page={{ page_obj.next_page_number }}">siguiente</a>
+        {% endif %}
+    </span>
+</div>
+<h3> llamando desde variable personalizada</h3>
+{% for p in productos %}
+    <p>{{ p.nombre }}</p>
+{% endfor %}
