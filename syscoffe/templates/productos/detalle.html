@@ -1,0 +1,8 @@
+{% extends 'base.html' %}
+
+{% block contenedor %}
+    <h1>Bienvenido: {{ request.user }} el producto destacado es {{ promocion.nombre }}</h1>
+    <h2>{{ object.nombre }}</h2>
+    <p>Precio: {{ object.precio }}</p>
+    <img src="{{ object.imagen.url }}">
+{% endblock %}

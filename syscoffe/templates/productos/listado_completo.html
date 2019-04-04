@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% block contenedor %}
+    {{ banner|safe }}
     <h2>Categorias</h2>
     <ul>
         {% for c in categorias %}

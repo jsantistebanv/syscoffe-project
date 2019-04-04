@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.views.generic import TemplateView, ListView
+from django.views.generic import TemplateView, ListView, DetailView
 from .models import Producto, Categoria
 # Create your views here.
 
@@ -17,6 +17,7 @@ class HomeProductoView(TemplateView):
         context["titulo"] = "LISTADO COMPLETO"
         context["productos"] = Producto.objects.all()
         context["categorias"] = Categoria.objects.all()
+        context["banner"] = "<h4>Producto destacado: {}</h4>".format(Producto.objects.first().nombre)
         return context
 
 
@@ -25,3 +26,8 @@ class ListadoProducto(ListView):
     template_name = 'productos/listado.html'
     context_object_name = 'productos'
     paginate_by = 1
+
+
+class DetalleProducto(DetailView):
+    model = Producto
+    template_name = 'productos/detalle.html'
