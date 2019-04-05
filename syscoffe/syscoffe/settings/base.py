@@ -26,6 +26,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'productos',
+    'almacenes',
+    'proveedores',
 ]
 
 MIDDLEWARE = [
@@ -97,3 +99,5 @@ USE_TZ = False
 
 STATIC_URL = '/static/'
 MEDIA_URL = '/media/'
+
+DATABASE_ROUTERS = ['core.dbrouter.ProveedorRouter',]
