@@ -1,13 +1,14 @@
 from django.db import models
 from productos.models import Producto
+from django.utils.translation import ugettext_lazy as _
 
 
 class Almacen(models.Model):
     direccion = models.CharField(max_length=100)
 
     class Meta:
-        verbose_name = 'almacen'
-        verbose_name_plural = 'almacenes'
+        verbose_name = _('container')
+        verbose_name_plural = _('containers')
 
     def __str__(self):
         return self.direccion

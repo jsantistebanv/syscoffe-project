@@ -1,0 +1,47 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-04-04 21:56-0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: .\almacenes\models.py:10
+msgid "container"
+msgstr "Almacen"
+
+#: .\almacenes\models.py:11
+msgid "containers"
+msgstr "Almacenes"
+
+#: .\productos\models.py:15
+msgid "codigo de producto"
+msgstr ""
+
+#: .\productos\models.py:16
+msgid "es porducto activo activo"
+msgstr ""
+
+#: .\productos\models.py:17
+msgid "nombre del producto"
+msgstr "nombre"
+
+#: .\syscoffe\settings\base.py:99
+msgid "English"
+msgstr ""
+
+#: .\syscoffe\settings\base.py:100
+msgid "Spanish"
+msgstr ""
