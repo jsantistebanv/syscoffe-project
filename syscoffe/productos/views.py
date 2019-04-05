@@ -1,6 +1,8 @@
 from django.shortcuts import render
-from django.views.generic import TemplateView, ListView, DetailView
+from django.urls import reverse_lazy
+from django.views.generic import TemplateView, ListView, DetailView, FormView
 from .models import Producto, Categoria
+from .forms import ProductoForm
 # Create your views here.
 
 
@@ -31,3 +33,20 @@ class ListadoProducto(ListView):
 class DetalleProducto(DetailView):
     model = Producto
     template_name = 'productos/detalle.html'
+
+
+class ProductoFormView(FormView):
+    template_name = 'productos/crear.html'
+    form_class = ProductoForm
+    success_url = reverse_lazy('productos:success')
+
+    def form_valid(self, form):
+        form.save()
+        return super(ProductoFormView, self).form_valid(form)
+
+    def form_invalid(self, form):
+        return super(ProductoFormView, self).form_invalid(form)
+
+
+class ProductoSuccessView(TemplateView):
+    template_name = 'productos/success.html'
