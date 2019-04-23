@@ -1,0 +1,4 @@
+Django==1.11.20
+django-suit==0.2.25
+djangorestframework==3.9.2
+Pillow==5.4.1
