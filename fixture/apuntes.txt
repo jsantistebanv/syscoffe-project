@@ -1,0 +1,21 @@
+configurando la llave
+ssh-keygen.exe
+clave 123456
+/c/Users/Asus/.ssh/id_rsa.pub
+
+configurando maquina
+git config --global user.name "Jose Alonso"
+git config --global user.email "jasv166@gmail.com"
+
+
+configurar proyecto en un proyecto existente
+
+
+--
+https://pastebin.com/8dStRPs2
+https://wetransfer.com/downloads/39bb1c13f93e93463ba9c7f6314f8d6f20190423002933/8de592
+
+salir de un proyecto 
+$deactivate
+
+https://pastebin.com/p5PkUCMi
